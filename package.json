@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.2",
+    "gulp": "^3.9.1"
+  }
+}
