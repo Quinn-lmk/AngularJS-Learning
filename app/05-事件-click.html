@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>事件</title>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <button ng-click="count = count + 1">点我</button>
+            {{count}}
+        </div>
+
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+        
+        <script type="text/javascript">
+            var app=angular.module('myApp',[]);
+            app.controller('myCtrl', function($scope){
+                $scope.count=0;
+            })
+
+        </script>
+
+    </body>
+</html>

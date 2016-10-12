@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <style>
+        table, th , td  {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        /*使用了奇偶选择器*/
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+<body>
+
+    <div ng-app="myApp" ng-controller="customerCtrl">
+        <table>
+            <tr ng-repeat="x in names">
+                <td ng-if="$odd" style="background-color:yellow">
+                {{ x.Name }}</td>
+                <td ng-if="$even">
+                {{ x.Name }}</td>
+                <td ng-if="$odd" style="background-color:blue">
+                {{ x.Country }}</td>
+                <td ng-if="$even">
+                {{ x.Country }}</td>
+            </tr>
+        </table>
+        {{names[0]}}
+    </div>
+
+
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+<script type="text/javascript">
+    var app=angular.module('myApp',[]);
+    app.controller("customerCtrl",function($scope,$http){
+        $http.get('Customers_JSON.php')
+            .success(function  (response) {
+                $scope.names=response.records;
+                $scope.test=response.test;
+            }); 
+    })
+
+</script>
+
+</body>
+</html>

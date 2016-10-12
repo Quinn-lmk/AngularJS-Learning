@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>输入过滤器</title>
+    </head>
+    <body>
+        //输入过滤器，使用filter:test 绑定了输入框，并且连写了过滤
+        <div ng-app="myApp" ng-controller="namesCtrl">
+            <p><input type="text" ng-model="test"></p>
+            <ul>
+                <li ng-repeat="x in names | filter:test | orderBy:'country'">
+                    {{ (x.name | uppercase) + ', ' + x.country }}
+                </li>
+            </ul>
+        </div>
+        <script src="namesController.js"></script>
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+        <script src="namesController.js"></script>
+    </body>
+</html>

@@ -8,12 +8,20 @@
 <body>
 
     <div ng-app="myApp" ng-controller="personCtrl">
-        <p>姓名为 {{ lastName | uppercase }}</p>
+        名<input type="text" name="" ng-model="firstName"><br>
+        姓<input type="text" name="" ng-model="lastName"><br>
+        <br>
+
+        姓名: {{firstName + "  " + lastName}}<br>
+        姓名: {{fullName()}}
     </div>
 
 
 <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
 
+    <!-- 可以将下列文件另存为其它的控制器 -->
     <script src="personController.js"></script>
+    
+    
 </body>
 </html>

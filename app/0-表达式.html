@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式</title>
+</head>
+<body>
+
+    <div ng-app="" ng-init="quantity=1;cost=5;firstName='John';lastName='Doe';person={firstName:'John',lastName:'Doe'};points=[1,15,19,2,40]">
+        <p>我的第一个表达式 {{5+5}}</p>
+        <p>可以使用乘除 {{quantity * cost}}</p>
+        <p>字符串也可以连接 {{firstName + "  " + lastName}}</p>
+        <p>也可以使用对象里的：{{person.lastName}}</p>
+        <p>也可以使用数组里的：{{points[1]}}</p>
+        <p>上面的这些都可以使用 data-ng-bind  : <span data-ng-bind="quantity * cost"></span></p>
+        
+    </div>
+
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+</body>
+</html>

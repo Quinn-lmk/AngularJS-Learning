@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>事件</title>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="personCtrl">
+            <button ng-click="toggle()">隐藏/显示</button>
+            <p ng-hide="myVar">
+                名: <input type=text ng-model="firstName"><br>
+                姓: <input type=text ng-model="lastName"><br><br>
+                姓名: {{firstName + " " + lastName}}
+            </p>
+        </div>
+
+            <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+            <script type="text/javascript">
+                var app=angular.module('myApp',[]);
+                app.controller('personCtrl',function($scope){
+                    $scope.firstName='John';
+                    $scope.lastName ="Tom";
+                    $scope.myVar=false;
+                    $scope.toggle = function  () {
+                         return $scope.myVar = !$scope.myVar;
+                    }
+                })
+            </script>
+        </body>
+    </html>

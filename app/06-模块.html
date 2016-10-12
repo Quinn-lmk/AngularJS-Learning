@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>模块</title>
+    </head>
+    <body>
+        <h3>
+        将模板都分开~更好的使用<br>
+        &lt;script src="myApp.js">&lt;/script><br>
+        &lt;script src="myCtrl.js">&lt;/script>
+        </h3>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            {{ firstName + " " + lastName }}
+        </div>
+        
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+        <script src="myApp.js"></script>
+        <script src="myCtrl.js"></script>
+        
+    </body>
+</html>

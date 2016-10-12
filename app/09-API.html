@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+</head>
+<body>
+    <h3>angular.lowercase()<br>
+        angular.uppercase()<br>
+        angular.isString()<br>
+        angular.isNumber()<br>
+        还有之前用过的 angular.copy()
+    </h3>
+    
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>{{ x1 }}</p>
+        <p>{{ x2 }}</p>
+    </div>
+
+
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+        $scope.x1 = "JOHN";
+        $scope.x2 = angular.lowercase($scope.x1);
+        });
+    </script>
+</body>
+</html>

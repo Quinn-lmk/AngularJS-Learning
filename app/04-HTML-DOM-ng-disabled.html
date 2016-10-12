@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+    <body>
+        <h3>ng-disabled ng-show ng-hide ng-show</h3>
+        <div ng-app="" ng-init="mySwitch=true">
+            <p><button ng-disabled="mySwitch">点我</button></p>
+            <p><input type="checkbox"ng-model="mySwitch" name="">按钮</p>
+            <p>{{mySwitch}}</p>
+            <br>
+            <p ng-show="true">我是可见的。</p>
+            <p ng-show="false">我是不可见的。</p>
+            <p ng-hide="true">我是不可见的。</p>
+            <p ng-hide="false">我是可见的。</p>
+            <p>上面有个两个不可见的</p>
+        </div>
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    </body>
+</html>

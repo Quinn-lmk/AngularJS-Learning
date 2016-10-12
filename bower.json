@@ -1,20 +1,10 @@
 {
-  "name": "yo",
+  "name": "angurlarjs",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1",
-    "jquery": "^3.1.0",
-    "mocha": "^3.0.2",
-    "chai": "^3.5.0"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
+    "angular": "angularjs#^1.5.8",
+    "bootstrap": "^3.3.7",
+    "angular-animate": "^1.5.8"
   }
 }
